@@ -294,7 +294,7 @@ class VideoDetection {
 	}
 
 	IsFullScreen() {
-		return this.video.scrollWidth > screen.width - 30;
+		return (this.video.scrollWidth > screen.width - 30) && (document.fullscreenElement || window.fullScreen);
 	}
 
 	GetClientRect() {
@@ -715,7 +715,7 @@ function fSetup() {
 		namediv = document.createElement("div");
 		namediv.id = "namediv";
 
-		if (firstVideo != null)//fullScreen)
+		if ((firstVideo != null) && (document.fullscreenElement || window.fullScreen)) //fullScreen)
 		{
 			firstVideo.parentNode.insertBefore(namediv, firstVideo.parentNode.firstChild);
 		}
