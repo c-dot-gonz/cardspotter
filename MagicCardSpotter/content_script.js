@@ -879,9 +879,9 @@ function fGetImageUrl(coreUrl) {
 	}
 	let useFast = true;
 	if (useFast) {
-		return "https://c1.scryfall.com/file/scryfall-cards/normal/" + coreUrl + ".jpg";
+		return "https://cards.scryfall.io/" + coreUrl + ".jpg";
 	}
-	return "https://c1.scryfall.com/file/scryfall-cards/normal/" + coreUrl + ".png";
+	return "https://cards.scryfall.io/" + coreUrl + ".png";
 }
 
 function fShowResult(result) {
